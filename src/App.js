@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
-import Toggle from './ToggleRenderProps';
+import Toggle from './Toggle'
 
-export class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
         <Toggle
-          render={({ toggle, on }) => (
-            <div>
-              {on && <h1>Hello</h1>}
-              <button onClick={toggle}>Show me</button>
-            </div>
+          render={({ on, toggle }) => (
+            <>
+              {on && <p>This from Toggle but from App</p>}
+              <button onClick={toggle}>Show &amp; Hide</button>
+            </>
           )}
         />
-      </div>
+      </div >
     )
   }
 }
 
-export default App

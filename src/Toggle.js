@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 export default class Toggle extends Component {
+
  state = {
-  on: false,
+  on: true
  }
 
  toggle = () => {
@@ -10,11 +11,15 @@ export default class Toggle extends Component {
    on: !this.state.on
   })
  }
+
  render() {
+  const { render } = this.props
   return (
    <div>
-    {this.state.on && <h1>Toggle me</h1>}
-    <button onClick={this.toggle}>Show/Hide</button>
+    {render({
+     on: this.state.on,
+     toggle: this.toggle
+    })}
    </div>
   )
  }

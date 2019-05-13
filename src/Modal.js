@@ -13,7 +13,7 @@ export default class Modal extends Component {
         <CloseButton onClick={toggle}>Close</CloseButton>
         <h1>{children}</h1>
        </ModalCard>
-       <Background />
+       <Background onClick={toggle} />
       </ModalWrapper>
      </>
     }

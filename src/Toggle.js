@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 export default class Toggle extends Component {
 
  state = {
@@ -10,13 +9,14 @@ export default class Toggle extends Component {
   this.setState({
    on: !this.state.on
   })
- }
 
+ }
  render() {
   const { children } = this.props
-  return children({
+  return (children({
    on: this.state.on,
    toggle: this.toggle
   })
+  )
  }
 }

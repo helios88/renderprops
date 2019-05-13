@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
-import Toggle from './Toggle';
-import Modal from './Modal';
+import { Toggle, Modal } from './Utilities'
 export default class App extends Component {
   render() {
     return (

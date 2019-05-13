@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Portal from './Portal'
+import Icon from './Icon'
 
-import Icon from './Utilities/Icon'
+
 export default class Modal extends Component {
  render() {
   const { children, toggle, on } = this.props

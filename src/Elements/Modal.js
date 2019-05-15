@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Portal, absolute } from 'Utilities';
-import { Card } from './Cards';
 import Icon from './Icon';
+import { Card } from './Cards';
 
 export default class Modal extends Component {
   render() {
@@ -40,7 +40,7 @@ align-items: center;
 `;
 
 const ModalCard = styled(Card)`
-position: relative;
+position: relative; 
 min-width: 500px;
 display: flex;
 justify-content: center;
@@ -49,20 +49,18 @@ z-index: 10;
 `;
 
 const CloseButton = styled.button`
-position: absolute;
-top: 0;
-right: 0;
+${absolute({
+    x: 'right',
+  })};
 border: none;
 background: transparent;
 padding: 15px;
 `;
 
 const Background = styled.div`
-position: absolute;
+${absolute({})};
 width: 100%;
 height: 100%;
-top: 0;
-left: 0;
 background: black;
-opacity: 0.7;
+opacity: 0.2;
 `;

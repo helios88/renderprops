@@ -10,7 +10,7 @@ export default class App extends Component {
         <Toggle>
           {({ on, toggle }) => (
             <>
-              <button onClick={toggle}>Login</button>
+              <button type="submit" onClick={toggle}>Login</button>
               <Modal on={on} toggle={toggle}>
                 <h1>Inside a modal!</h1>
               </Modal>

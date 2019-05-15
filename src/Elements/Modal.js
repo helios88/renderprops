@@ -1,30 +1,32 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { Portal } from 'Utilities'
-import { Card } from 'Elements/Cards'
-import Icon from 'Elements/Icon'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Portal } from 'Utilities';
+import { Card } from './Cards';
+import Icon from './Icon';
 
 export default class Modal extends Component {
- render() {
-  const { children, toggle, on } = this.props
-  return (
-   <Portal>
-    {on &&
-     <>
-      <ModalWrapper>
-       <ModalCard>
-        <CloseButton onClick={toggle}>
-         <Icon name="close" />
-        </CloseButton>
-        <h1>{children}</h1>
-       </ModalCard>
-       <Background onClick={toggle} />
-      </ModalWrapper>
-     </>
-    }
-   </Portal>
-  )
- }
+  render() {
+    const { children, toggle, on } = this.props;
+    return (
+      <Portal>
+        {on
+          && (
+            <>
+              <ModalWrapper>
+                <ModalCard>
+                  <CloseButton onClick={toggle}>
+                    <Icon name="close" />
+                  </CloseButton>
+                  <h1>{children}</h1>
+                </ModalCard>
+                <Background onClick={toggle} />
+              </ModalWrapper>
+            </>
+          )
+        }
+      </Portal>
+    );
+  }
 }
 
 const ModalWrapper = styled.div`
@@ -54,7 +56,7 @@ top: 0;
 right: 0;
 border: none;
 background: transparent;
-padding: 10px;
+padding: 15px;
 `;
 
 const Background = styled.div`
@@ -64,5 +66,5 @@ height: 100%;
 top: 0;
 left: 0;
 background: black;
-opacity: 0.3;
+opacity: 0.7;
 `;

@@ -1,7 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component, createContext } from 'react';
 import { Toggle } from 'Utilities';
 import { Modal } from 'Elements';
 
+const UserContext = createContext();
+
+class UserProvider extends Component {
+  state = {
+    id: '123',
+    name: 'Henry',
+    email: 'henry@henry.com',
+  }
+
+  render() {
+    const { children } = this.props;
+    return (
+      <UserContext.Provider
+        value={{
+          user: this.state,
+        }}
+      >
+        {children}
+      </UserContext.Provider>
+    );
+  }
+}
 
 export default class App extends Component {
   render() {
@@ -20,4 +42,6 @@ export default class App extends Component {
       </>
     );
   }
+
+  a
 }

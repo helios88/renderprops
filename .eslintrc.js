@@ -28,5 +28,7 @@ module.exports = {
         "import/no-unresolved": "off",
         "react/prefer-stateless-function": "off",
         "react/prop-types": "off",
+        "react/no-multi-comp": "off",
+        "react/sort-comp": "off"
     }
 };

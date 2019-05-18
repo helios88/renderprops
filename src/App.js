@@ -1,7 +1,7 @@
 import React, { Component, createContext } from 'react';
 import { Toggle } from 'Utilities';
 import { Modal } from 'Elements';
-import { User } from './User';
+import User from './User';
 import { UserContext } from './UserContext';
 
 class UserProvider extends Component {

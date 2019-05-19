@@ -22,6 +22,7 @@ module.exports = {
     ],
     "extends": "airbnb",
     "rules": {
+        "eslint(indent)": "off",
         "react/jsx-filename-extension": 0,
         "function-paren-newline": 0,
         "import/prefer-default-export": "off",
@@ -30,6 +31,7 @@ module.exports = {
         "react/prop-types": "off",
         "react/no-multi-comp": "off",
         "react/sort-comp": "off",
-        "react/no-unused-state": "off"
+        "react/no-unused-state": "off",
+        "react/jsx-indent": "off"
     }
 };
